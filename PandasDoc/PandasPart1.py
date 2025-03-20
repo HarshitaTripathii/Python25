@@ -21,7 +21,9 @@ data={
 df=pd.DataFrame(data)
 print(df)
 
-'''col1=df["Name"]
+'''
+#soongle columns selection
+col1=df["Name"]
 print(col1)
 print(type(col1))'''
 
@@ -40,10 +42,23 @@ row1=df[df['age']>23]
 print(row1)
 print(type(row1))'''
 
-# multiple filtering
+'''# multiple filtering
 row2=df[(df["Score"]>80)& (df["age"]>18)]
 print(row2)
+'''
 
+# ADVANCED PANDAS : UPDATE : ADD : REMOVE
+
+'''# adding using assignment
+l=['A', 'B','C', 'D','E','F','G','H']
+df["alpha"]=l
+df["bonus"]=df["sal"]*0.01
+print(df)'''
+
+'''#using insert fucntion
+l=[x*10 for x in range(1,9) ]
+df.insert(0,"ID", l)
+print(df)'''
 
 
 
