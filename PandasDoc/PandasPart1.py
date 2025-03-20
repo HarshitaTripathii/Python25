@@ -75,7 +75,8 @@ df.loc[r1,"age"]=37
 print(df.index)'''
 
 
-'''#removing columns : rows : using df.drop(index=[], columns=[]) for multiple or df.drop(index_value, "columns_Name") for single row and column
+#removing columns 
+''': rows : using df.drop(index=[], columns=[]) for multiple or df.drop(index_value, "columns_Name") for single row and column
 l=df["sal"]*0.01
 df.insert(4, "bonus", l)
 print(df)
@@ -88,5 +89,16 @@ print(df)
 
 df.drop(index=4, columns="Score", inplace=True)
 print(df)'''
+
+#sorting : multiple / single column
+'''d1={
+    "name":["adya", "riya", "babita"],
+    "age":[28,34,22],
+    "sal":[10000,20000,30000]
+}
+df1=pd.DataFrame(d1)
+print(df1)
+df1.sort_values(by=[ "age","sal"], ascending=[True, True], inplace=True)
+print(df1)'''
 
 
