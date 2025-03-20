@@ -2,14 +2,22 @@ import pandas as pd
 import os 
 
 
-data={
+data1={
     "Name" : ["harshita", "Anubhav", "dhruv", "Rishi"],
     "Age" :[21, 22,20,23],
     "City" :["Noida", "Delhi", "Ghaziabad", "Jaipur" ]
     }
+df1=pd.DataFrame(data1)
+# print(df1)
+
+# print(df1.info())
+
+data={
+    "Name" :["yash", "riya", "raj", "dev", "prabhu", "dhruv", "yashi" , "harshit"],
+    "age":[22,25,20,33,24,20,21,20],
+    "Score":[99,67,85,34,22,55,90,95],
+    "sal":[5500,6699,4433,7890,2356,8899,99999,548907]
+}
 df=pd.DataFrame(data)
 print(df)
-print(os.getcwd())
-# df.to_csv(r"c:\Users\91912\Desktop\python -25\Python25\PandasDoc\Details.csv", index=False)
-df.to_excel(r"c:\Users\91912\Desktop\python -25\Python25\PandasDoc\Details.xlsx", index=False)
-df.to_json(r"c:\Users\91912\Desktop\python -25\Python25\PandasDoc\Details.json", index=False)
+print(df.describe())
