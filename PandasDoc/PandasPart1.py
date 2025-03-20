@@ -101,4 +101,7 @@ print(df1)
 df1.sort_values(by=[ "age","sal"], ascending=[True, True], inplace=True)
 print(df1)'''
 
+grp=df.groupby("age")["Score"].sum()
+print(grp)
+
 
