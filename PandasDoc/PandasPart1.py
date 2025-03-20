@@ -20,4 +20,21 @@ data={
 }
 df=pd.DataFrame(data)
 print(df)
-print(df.describe())
+
+col1=df["Name"]
+print(col1)
+print(type(col1))
+
+'''c=0
+for i in col1:
+    print(f"name {c+1} is {i}")
+    c=c+1'''
+
+# multiple columns
+
+dfc=df[["Name", "age"]]
+print(type(dfc))
+print(dfc)
+
+
+
