@@ -21,20 +21,30 @@ data={
 df=pd.DataFrame(data)
 print(df)
 
-col1=df["Name"]
+'''col1=df["Name"]
 print(col1)
-print(type(col1))
+print(type(col1))'''
 
 '''c=0
 for i in col1:
     print(f"name {c+1} is {i}")
     c=c+1'''
 
-# multiple columns
-
+'''# multiple columns
 dfc=df[["Name", "age"]]
 print(type(dfc))
-print(dfc)
+print(dfc)'''
+
+'''# single filtering 
+row1=df[df['age']>23]
+print(row1)
+print(type(row1))'''
+
+# multiple filtering
+row2=df[(df["Score"]>80)& (df["age"]>18)]
+print(row2)
+
+
 
 
 
