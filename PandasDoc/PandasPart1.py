@@ -60,6 +60,21 @@ l=[x*10 for x in range(1,9) ]
 df.insert(0,"ID", l)
 print(df)'''
 
+#updation
+'''#  df.loc[row_index, "col_name"]=new_value
+df.loc[3,"Score"]=88
+print(df)'''
 
+'''# can modify the existing column as well.
+df["sal"]=df["sal"]*10
+print(df)'''
+
+'''# changing age from 20 to 37
+r1=df["age"]==20
+df.loc[r1,"age"]=37
+print(df.index)'''
+
+
+#removing columns : rows : using df.drop(index=[], columns=[]) for multiple or df.drop(index_value, "columns_Name") for single row and column
 
 
