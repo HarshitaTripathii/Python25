@@ -75,6 +75,18 @@ df.loc[r1,"age"]=37
 print(df.index)'''
 
 
-#removing columns : rows : using df.drop(index=[], columns=[]) for multiple or df.drop(index_value, "columns_Name") for single row and column
+'''#removing columns : rows : using df.drop(index=[], columns=[]) for multiple or df.drop(index_value, "columns_Name") for single row and column
+l=df["sal"]*0.01
+df.insert(4, "bonus", l)
+print(df)
+
+rowToDrop=df[df["age"]>25].index
+df.drop(index=rowToDrop,columns="bonus", inplace=True)
+print(df)
+
+#deleting single row
+
+df.drop(index=4, columns="Score", inplace=True)
+print(df)'''
 
 
